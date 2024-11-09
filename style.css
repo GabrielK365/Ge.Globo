@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 10px;
+}
+
+.menu-items {
+    display: flex;
+    gap: 5px;
+}
+
+.menu-items div {
+    font-size: 20px;
+    font-family: Cambria, serif;
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-items div:hover {
+    border-bottom: 2px solid currentColor;
+}
+
+.globo { color: #0669de; }
+.g1 { color: #c4170c; }
+.ge { color: #06aa48; }
+.gshow { color: #ff6700; }
+.globoplay { color: #fb0334; }
+.cartola { color: #e3672b; }
+.sportv { color: #08053a; }
+
+.account, .account2 {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 22px;
+    font-family: Arial, serif;
+}
+
+.account div:hover, .account2 div:hover {
+    color: blue;
+}
+
+.account .icon {
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.bloco-verde {
+    background-color: #00a651;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 74px;
+    position: relative;
+}
+
+.bloco-verde::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bloco-verde .esquerda-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bloco-verde .menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bloco-verde .logo-ge {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bloco-verde .container img {
+    width: 24px;
+    height: 24px;
+}
+
+.bloco-verde .center-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bloco-verde .direita-menu {
+    display: flex;
+    align-items: center;
+}
+
+.container2 {
+    background-color: #00a651;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+}
+
+.container2 .left-menu,
+.container2 .right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container2 .left-menu a,
+.container2 .right-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container2 div a:hover {
+    border-bottom: 2px solid currentColor;
+}
+
+/* Estilo padrão */
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.jogos {
+    width: 40%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container3 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tabela {
+        width: 100%;
+    }
+
+    .jogos {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.rodada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.seta-esquerda, .seta-direita {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.jogo {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.estadio {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+}
+
+.data-hora {
+    font-weight: bold;
+}
+
+.times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time img {
+    width: 80px;
+    height: 80px;
+}
+
+.versus {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.container-input-search {
+    width: 120px;
+    height: 28px;
+    display: flex;
+    padding: 4px 8px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(1, 56, 1);
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.container-input-search:has(.search-input:focus-visible) {
+    background-color: white;
+    width: 230px;
+    transition: 0.5s;
+}
+
+.search-input:focus-visible {
+    color: gray;
+}
+
+.search-input:focus-visible::placeholder {
+    color: grey;
+}
+
+.search-input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.search-input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.search-icon {
+    color: white;
+    margin-right: 2px;
+}
+
+.container-input-search:has(.search-input:focus-visible) .search-icon {
+    color: grey;
+}
+
+.busca {
+    visibility: hidden;
+    position: fixed;
+    min-height: 30px;
+    width: 110px;
+    transition: width 0.5s;
+    padding: 4px 8px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 80px;
+    right: 16px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.direita-menu:has(.search-input:focus-visible) .busca {
+    transition: visibility 0.5s 1s, width 0.5s;
+    visibility: visible;
+    width: 238px;
+}
+
+.bolinha-verde {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.bolinha-branca {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.bolinha-vermelha {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+    .container3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jogos {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tabela {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate; 
+        border-spacing: 0; 
+        margin-top: 20px; 
+    }
+
+    th, td {
+        padding: 20px; 
+        text-align: center;
+        font-size: 18px; 
+        border-radius: 8px; 
+    }
+
+    th {
+        background-color: #f4f4f4;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ddd;
+    }
+
+    tr {
+        transition: background-color 0.3s ease; 
+    }
+
+    tr:hover {
+        background-color: #f1f1f1; 
+    }
+
+    td {
+        background-color: #fff;
+        padding: 30px; 
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    }
+
+    .rodada {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .jogos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+
+    .jogo {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        width: 250px; 
+        text-align: center;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .times {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .versus {
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
